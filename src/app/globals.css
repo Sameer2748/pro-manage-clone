@@ -1,6 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Doto';
+  src: url('/fonts/Doto-Regular.woff2') format('woff2'),
+       url('/fonts/Doto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/fonts/LibreBaskerville-Regular.woff2') format('woff2'),
+       url('/fonts/LibreBaskerville-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --background: #ffffff;
@@ -9,13 +24,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Doto',Arial, Helvetica, sans-serif;
 }
