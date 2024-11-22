@@ -16,7 +16,7 @@ const page = () => {
     const fetch = async () => {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:3000/api/v1/todo/anyone/${id}`
+        `https://pro-manage-backend-psi.vercel.app/api/v1/todo/anyone/${id}`
       );
       setTodo(res.data.todo);
       setCheckedTask(

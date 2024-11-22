@@ -97,7 +97,7 @@ const BoardDetails = ({
       console.log(token, board._id);
 
       const res = await axios.post(
-        `http://localhost:3000/api/v1/todo/`,
+        `https://pro-manage-backend-psi.vercel.app/api/v1/todo/`,
         { boardId: board._id },
         { headers: { Authorization: token || "" } }
       );
@@ -133,7 +133,7 @@ const BoardDetails = ({
     try {
       const token = await localStorage.getItem("token");
       const res = await axios.post(
-        "http://localhost:3000/api/v1/todo/create",
+        "https://pro-manage-backend-psi.vercel.app/api/v1/todo/create",
         {
           title: title,
           priority: priority,
@@ -161,7 +161,7 @@ const BoardDetails = ({
     try {
       const token = await localStorage.getItem("token");
       await axios.post(
-        "http://localhost:3000/api/v1/board/create",
+        "https://pro-manage-backend-psi.vercel.app/api/v1/board/create",
         { name: title, description: description },
         { headers: { Authorization: token || "" } }
       );
@@ -231,7 +231,7 @@ const BoardDetails = ({
 
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/v1/todo/updatetodo/${id}`,
+        `https://pro-manage-backend-psi.vercel.app/api/v1/todo/updatetodo/${id}`,
         newStatus,
         {
           headers: {

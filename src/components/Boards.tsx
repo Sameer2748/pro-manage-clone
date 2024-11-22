@@ -18,7 +18,7 @@ const Boards = () => {
   useEffect(() => {
     const fetchBoards = async () => {
       const token = await localStorage.getItem("token");
-      const res = await axios.get("http://localhost:3000/api/v1/board/", {
+      const res = await axios.get("https://pro-manage-backend-psi.vercel.app/api/v1/board/", {
         headers: {
           Authorization: token || "",
         },
@@ -37,7 +37,7 @@ const Boards = () => {
     try {
       const token = await localStorage.getItem("token");
       const res = await axios.post(
-        "http://localhost:3000/api/v1/board/create",
+        "https://pro-manage-backend-psi.vercel.app/api/v1/board/create",
         { name: title, description: description },
         { headers: { Authorization: token || "" } }
       );

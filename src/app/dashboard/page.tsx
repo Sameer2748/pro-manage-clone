@@ -58,7 +58,7 @@ const Page = () => {
         }
         const getuser  = async()=>{
           const token = await localStorage.getItem("token");
-          const res = await axios.get("http://localhost:3000/api/v1/user/", {
+          const res = await axios.get("https://pro-manage-backend-psi.vercel.app/api/v1/user/", {
               headers: {
                   Authorization: token,
               }

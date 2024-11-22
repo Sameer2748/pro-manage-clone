@@ -11,7 +11,7 @@ export const userSelector = selector({
       const token = localStorage.getItem('token');
       if (!token) return { username: '', email: '' }; // Default for no token
 
-      const response = await axios.get('http://localhost:3000/api/v1/user/', {
+      const response = await axios.get('https://pro-manage-backend-psi.vercel.app/api/v1/user/', {
         headers: { Authorization: token },
       });
 

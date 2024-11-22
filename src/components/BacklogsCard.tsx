@@ -43,7 +43,7 @@ const BacklogsCard = ({
     // Call API to update checklist on backend
     try {
       setCheckedTask(updatedCheckList.filter(todo=> todo.isDone).length);
-      const response = await axios.post(`http://localhost:3000/api/v1/todo/update/${todo._id}`, {
+      const response = await axios.post(`https://pro-manage-backend-psi.vercel.app/api/v1/todo/update/${todo._id}`, {
         checkId: updatedCheckList[index]._id,
       }, {
         headers: {
@@ -65,7 +65,7 @@ const toggleCollapse = () => {
 const handleDelete = async()=>{
   try {
     const response = await axios.delete(
-      `http://localhost:3000/api/v1/todo/delete/${todo._id}`,
+      `https://pro-manage-backend-psi.vercel.app/api/v1/todo/delete/${todo._id}`,
       {
         headers: {
           Authorization: `${localStorage.getItem("token")}`, // Include token for auth
